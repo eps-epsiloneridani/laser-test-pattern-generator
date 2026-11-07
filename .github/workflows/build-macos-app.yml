@@ -102,3 +102,4 @@ jobs:
         with:
           name: ${{ env.ARTIFACT_NAME }}
           path: dist/${{ env.ARTIFACT_NAME }}.tar.gz
+# Fork build trigger: registers this workflow on the fork (fork Actions start disabled).
