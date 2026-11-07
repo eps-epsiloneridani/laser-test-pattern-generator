@@ -9,7 +9,7 @@ permissions:
 jobs:
   build-macos-app:
     name: Build macOS app
-    runs-on: macos-14
+    runs-on: macos-13
 
     env:
       APP_NAME: LaserTestPatternGenerator
