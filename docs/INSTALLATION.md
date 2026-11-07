@@ -76,8 +76,17 @@ experimental app bundle, or if you want the most reliable startup path.
 
 1. Install Python 3 if it is not already installed.
 2. Download and extract the source ZIP, or clone the repository.
-3. Open Terminal in the project folder.
-4. Run:
+3. Double-click `start_gui_macos.command` in the project folder. It picks the
+   first Python on your machine that actually has Tkinter and starts the GUI
+   with it.
+
+Or open Terminal in the project folder and run:
+
+```bash
+./start_gui_macos.command
+```
+
+If you prefer to start the GUI by hand, run:
 
 ```bash
 python3 run_gui.py
@@ -90,6 +99,25 @@ python3 makera_material_test_generator.py --gui
 ```
 
 If macOS blocks files downloaded from the internet, make sure you extracted the ZIP into a normal user folder such as Downloads or Documents and run the Python command from Terminal.
+
+### macOS: `No module named '_tkinter'`
+
+Some Python installations are built without Tkinter, for example uv-managed
+builds and Homebrew builds of very new versions such as 3.14 or 3.15. In that
+case `python3 run_gui.py` fails with:
+
+```text
+ModuleNotFoundError: No module named '_tkinter'
+```
+
+This is a missing standard library component, not a missing package, so
+`pip install` cannot fix it. Either start the app with
+`./start_gui_macos.command`, which skips interpreters without Tkinter, or
+install a Tk-enabled Python:
+
+```bash
+brew install python@3.11 tcl-tk
+```
 
 ## macOS: experimental app artifact
 

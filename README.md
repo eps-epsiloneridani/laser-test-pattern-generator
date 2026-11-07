@@ -65,6 +65,17 @@ Double-click:
 start_gui_windows.bat
 ```
 
+### macOS
+
+Double-click:
+
+```text
+start_gui_macos.command
+```
+
+It picks the first Python on your machine that has Tkinter, so it also works
+when `python3` was built without it.
+
 ### Linux/macOS
 
 ```bash
@@ -204,6 +215,7 @@ notes and safety reminders.
 - `run_gui.py` - GUI launcher used by Python users and the Windows exe build.
 - `laser_test_pattern_generator/` - Python package with CLI, GUI, and generator modules.
 - `start_gui_windows.bat` - Windows convenience launcher.
+- `start_gui_macos.command` - macOS convenience launcher; picks a Python that has Tkinter.
 - `templates/` - Makera Studio template projects used by `.mks` generation.
 - `presets/` - compatible JSON presets for the GUI.
 - `docs/` - safety notes, API documentation, presets, and roadmap.
