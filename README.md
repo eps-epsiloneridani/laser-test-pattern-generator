@@ -216,6 +216,7 @@ notes and safety reminders.
 - `laser_test_pattern_generator/` - Python package with CLI, GUI, and generator modules.
 - `start_gui_windows.bat` - Windows convenience launcher.
 - `start_gui_macos.command` - macOS convenience launcher; picks a Python that has Tkinter.
+- `scripts/build_macos_app_local.sh` - local macOS `.app` build using the CI flags.
 - `templates/` - Makera Studio template projects used by `.mks` generation.
 - `presets/` - compatible JSON presets for the GUI.
 - `docs/` - safety notes, API documentation, presets, and roadmap.

@@ -9,6 +9,23 @@ GitHub Actions workflow `Build macOS App`. It is intended as a convenience
 artifact for testing the stable v1.x Python/Tkinter app, not as a signed or
 notarized installer.
 
+## Local Build
+
+To produce the same `.app` on your own Mac without GitHub Actions:
+
+```bash
+scripts/build_macos_app_local.sh            # build into a temp folder
+scripts/build_macos_app_local.sh --install  # build and copy to ~/Applications
+```
+
+The script uses the same PyInstaller flags as the workflow above, keeps
+PyInstaller out of your system Python by building inside a throwaway virtual
+environment, and refuses to run if the selected Python cannot import `tkinter`.
+Use `--python /path/to/python3.11` to choose an interpreter explicitly.
+
+Local builds are ad-hoc signed and not notarized, so they are for your own use
+rather than for distribution.
+
 ## Package Contents
 
 The GitHub Actions artifact contains a `.tar.gz` archive. The tar archive is
